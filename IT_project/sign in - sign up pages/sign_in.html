@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Sign in</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-    <h1>Sign in</h1>
-    <button>home page</button>
-    <label for="Email">Email</label><br>
-    <input type="Email" id="Email" name="Email" required placeholder="Enter your Email"><br><br>
-<label for="password">Password</label><br>
-  <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
+<body>
+  <button onclick="goToHomepage.()">Home Page</button>
 
-  <input type="submit" value="Sign In">
-    <button>Sign up</button>
-</form>
-    </body>
+  <div class="signup-container">
+    <h3>Sign In</h3>
+    <form action="your_script.php" method="post">
+      <label for="Email">Email</label><br>
+      <input type="text" id="Email" name="Email" required placeholder="Enter your Email"><br>
+
+      <label for="password">Password</label><br>
+      <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
+
+      <input type="submit" value="Sign In">
+    </form>
+  </div>
+</body>
 </html>
