@@ -1,163 +1,228 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            IT's Store Project Home Page
-        </title>    
 
-    </head>
+<head>
+    <title>Home page</title>
+    <style>
+        body {
+            background-color: #8c1f27;
+            margin: 0;
+            padding: 0;
+        }
 
-    <body>
-        <header>
-            <div class="header_logo" >
-                <img src="Header_Logo.png" style="width: 50;">
-            </div>
-            <nav>
-                <ul class="Nav_Links">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#products">Products</a></li>
-                  <li><a href="#about">About Us</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                </ul>
-              </nav>
-              <div class="Home_Page_Icons">
-                <a href="Amazon-Search-Logo.png"></a>
-                <a href="Shopping_Cart_Icon.png"></a>
-              </div>
-        </header>
-            <!-- Hero Section -->
-    <section class="Hero">
-        <div class="Hero_Content">
-        <h1>Welcome to Our Store</h1>
-        <p>Discover the best products at unbeatable prices.</p>
-        <a href="https://www.google.com/" class="btn">Shop Now</a>
+        .arrow {
+            fill: white !important;
+        }
+
+        #d1 {
+            height: 40em;
+            background-color: #350c0f;
+            color: white;
+            vertical-align: middle;
+            align-content: center;
+        }
+
+        #d2 {
+            padding: 2px;
+            margin: 6em;
+            margin-top: 2em;
+            display: inline-block;
+            background-color: transparent;
+            width: 14em;
+            height: 1.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .c1 {
+            padding: 5px;
+            margin: 1.3em;
+            margin-top: 2em;
+            display: inline-block;
+            background-color: transparent;
+            width: 5em;
+            height: 1.5em;
+            border: 3px solid transparent;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 1s 0.2s;
+        }
+
+        #d3 {
+            background-color: #6dff8e;
+            color: black;
+        }
+
+        .c1:hover {
+            background-color: #6dff8e;
+            color: black;
+        }
+
+        .arrow:hover {
+            fill: #6dff8e;
+        }
+
+        .c2 {
+            height: 70vh;
+            width: 49vw;
+            display: inline-block;
+            background-color: white;
+            color: white;
+            vertical-align: middle;
+        }
+
+        #d121 {
+            height: 25vw;
+            width: 25vw;
+            display: inline-block;
+            background-color: transparent;
+            border: 3px solid black;
+            border-radius: 25vw;
+            background-image: url(sources/IMG_20180130_110103.jpg);
+            background-size: 35vw;
+        }
+
+        .c5 {
+            display: flex;
+            width: 34.5vw;
+            height: 60vh;
+            background-color: transparent;
+            padding: 3px;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .c6 {
+            width: 14.5vw;
+            height: 60vh;
+            background-color: transparent;
+            display: flex;
+            padding: 3px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #div1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        /* Basic styling for product cards */
+        .product-card {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            width: 250px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            border: none;
+            background-color: #6dff8e;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .product-card button:hover {
+            background-color: #50cc70;
+        }
+    </style>
+</head>
+
+<body>
+    <div name="container1" id="d1">
+        <div id="d2">
+            <font size="5">The MODERNIST</font><br />
+            <font size="2">for design</font>
         </div>
-    </section>
-  <!-- Featured Products Section -->
-  <section class="Featured_Products">
-    <h2>Featured Products</h2>
-    <div class="Products_Grid">
-      <div class="Product_Card_1">
-        <img src="FeaturedProduct_1.jpg" style=" height: 500px;">
-        <h3>SAMSUNG Galaxy A16 5G</h3>
-        <p>From<s>EGP8,070.00</s> ToEGP7,399.00 9%OFF</p>
-        <div>SAMSUNG Galaxy A16 5G A Series Cell Phone, Unlocked Android Smartphone, Large AMOLED Display, Durable<br> Design, Super Fast Charging, Expandable Storage, US Version, 2025, Blue Black</div>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card_2">
-        <img src="https://m.media-amazon.com/images/I/61exnkrjY5L._AC_SX679_PIbundle-2,TopRight,0,0_SH20_.jpg"style="height: 500px;">
-        <h3>LED Light Bar</h3>
-        <div>LED Light Bar, Music Sync RGB Light Bar, USB Ambient Lamp, Color Changing Gaming TV Backlight<br> with Remote Control, 15 Dynamic Modes for Room Gaming Decoration</div>
-        <p><s>FromEGP1,000.00</s> ToEGP800.00 20%OFF</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card_3">
-        <img src="https://m.media-amazon.com/images/I/71d2okjshqL.__AC_SX300_SY300_QL70_FMwebp_.jpg" style="height: 500px;">
-        <h3>CTIME 3-Tier Medicine Organizer</h3>
-        <div>CTIME 3-Tier Medicine Organizer - Portable Medicine Cabinet with Leather Handle,<br> Empty First Aid Kit for Home</div>
-        <p><s>FromEGP2,000.00</s> ToEGP1,850.00 7.5%OFF</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="product-card_4">
-        <img src="https://m.media-amazon.com/images/I/61xi1VU9aLL._AC_SX679_.jpg" style="height: 500px;">
-        <h3>Product Name 2</h3>
-        <p>EGP 2000</p>
-        <button>Add to Cart</button>
-      </div>
+        <div id="d3" class="c1">home</div>
+        <div id="d4" class="c1">style demo</div>
+        <div id="d5" class="c1">full width</div>
+        <div id="d6" class="c1">drop down</div>
+        <div id="d7" class="c1">portfolio</div>
+        <div id="d8" class="c1">gallery</div>
+
+        <div id="div1">
+            <div id="div11" class="c6"></div>
+            <div id="div12" class="c5">
+                <p></p>
+            </div>
+            <div id="div13" class="c5">
+                <div id="d121"></div>
+            </div>
+            <div id="div14" class="c6"></div>
+        </div>
     </div>
-  </section>
 
-  <section class="categories">
-    <h2>Shop by Category</h2>
-    <div class="category-grid">
-      <div class="category-card_1">
-        <img src="Pruduct1.png" style="height: 500px;">
-        <h3>Gaming Accessories</h3>
-        <button>See more</button>
-      </div>
-      <div class="category-card_2">
-        <img src="Product2.png" style="height: 500px;">
-        <h3>Top categories in Kitchen appliances</h3>
-      </div>
-      <div class="category-card_3">
-        <img src="Product3.png"style="height: 500px;">
-        <h3>Shop for your home essentials</h3>
-      </div>
-    </div>
-  </section>
-                             
-    <!-- Promotions Section -->
-<section class="promotions">
-    <div class="promo-banner">
-      <h2>Spring Sale is Here!</h2>
-      <p>Up to 50% off on selected items</p>
-      <a href="#sale" class="btn">Shop the Sale</a>
-    </div>
-  </section>
+    <h2 style="text-align:center">Featured Products</h2>
+    <div id="product-container" style="text-align:center;"></div>
 
-  <!-- Testimonials Section -->
-<section class="testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p>"Amazing quality and fast delivery! Will shop again."</p>
-        <h4>- Sarah M.</h4>
-      </div>
-      <div class="testimonial-card">
-        <p>"Excellent customer service and beautiful products."</p>
-        <h4>- James R.</h4>
-      </div>
-    </div>
-  </section>
+    <script>
+        const products = [
+            {
+                name: "SAMSUNG Galaxy A16 5G",
+                img: "FeaturedProduct_1.jpg",
+                description: "SAMSUNG Galaxy A16 5G A Series Cell Phone, Unlocked Android Smartphone, Large AMOLED Display...",
+                oldPrice: "EGP8,070.00",
+                newPrice: "EGP7,399.00",
+                discount: "9% OFF"
+            },
+            {
+                name: "LED Light Bar",
+                img: "LED_Light_Bar.jpg",
+                description: "LED Light Bar, Music Sync RGB Light Bar, USB Ambient Lamp, Color Changing...",
+                oldPrice: "EGP1,000.00",
+                newPrice: "EGP800.00",
+                discount: "20% OFF"
+            },
+            {
+                name: "CTIME 3-Tier Medicine Organizer",
+                img: "Medicine_Organizer.jpg",
+                description: "Portable Medicine Cabinet with Leather Handle, Empty First Aid Kit for Home...",
+                oldPrice: "EGP2,000.00",
+                newPrice: "EGP1,850.00",
+                discount: "7.5% OFF"
+            }
+        ];
 
-  <!-- Footer Section -->
-    <footer>
+        function createProductCard(product) {
+            const card = document.createElement("div");
+            card.className = "product-card";
 
-    </div>
-    <p>&copy; 2025 Store Name. All Rights Reserved.</p>
-  </footer>
-  <div align="center">
+            card.innerHTML = `
+                <img src="${product.img}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.description}</p>
+                <p><s>${product.oldPrice}</s> <strong>${product.newPrice}</strong> <span style="color:red">${product.discount}</span></p>
+                <button>Add to Cart</button>
+            `;
 
-  </div>
+            return card;
+        }
 
-  <div align="center" style="background-color: silver">
-    <a href="home.html">
-        home
-    </a> &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="">
-        contact us
-    </a> &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="">
-        about
-    </a>
-      <br/>
-      <font size="6" >Our social profiles</font>
-      <br/>
-      <br/>
-      <img src="Facebook-icon.png" height="50px" usemap="#fb">
-      <img src="google+.png" height="50px" usemap="#gg">
-      <img src="linkedin.png" height="50px" usemap="#li">
-      <img src="x.png" height="50px" usemap="#tw">
-      <map name="fb" >
-          <area shape="rect" href="http//www.facebook.com" target="_blank"coords="0,0,50,50"  />
-      </map>
-      <map name="gg">
-          <area shape="rect" href="http//www.google.com" target="_blank"coords="0,0,50,50"  />
-      </map>
-      <map name="li">
-          <area shape="rect" href="http//www.linkedin.com" target="_blank"coords="0,0,50,50"  />
-      </map>
-      <map name="tw">
-          <area shape="rect" href="http//www.x.com" target="_blank"coords="0,0,50,50"  />
-      </map>
-      <nav class="footer-nav" align="center">
-        <ul>
-          <a href="#privacy-policy">Privacy Policy</a> &nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="#terms-of-service">Terms of Service</a> &nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="#contact">Contact Us</a>
-        </ul>
-      </nav>
-      <br/>
-  </div>
-    </body>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("product-container");
+            products.forEach(product => {
+                const card = createProductCard(product);
+                container.appendChild(card);
+            });
+        });
+    </script>
+</body>
+
 </html>
