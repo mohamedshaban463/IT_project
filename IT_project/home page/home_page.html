@@ -5,7 +5,7 @@
     <title>Home page</title>
     <style>
         body {
-            background-color: #8c1f27;
+            background-color: #3abac4;
             margin: 0;
             padding: 0;
         }
@@ -16,7 +16,7 @@
 
         #d1 {
             height: 40em;
-            background-color: #350c0f;
+            background-color: #382d3d;
             color: white;
             vertical-align: middle;
             align-content: center;
@@ -49,17 +49,17 @@
         }
 
         #d3 {
-            background-color: #6dff8e;
+            background-color: #6dc9ff;
             color: black;
         }
 
         .c1:hover {
-            background-color: #6dff8e;
+            background-color: #6dc9ff;
             color: black;
         }
 
         .arrow:hover {
-            fill: #6dff8e;
+            fill: #f36dff;
         }
 
         .c2 {
@@ -78,7 +78,6 @@
             background-color: transparent;
             border: 3px solid black;
             border-radius: 25vw;
-            background-image: url(sources/IMG_20180130_110103.jpg);
             background-size: 35vw;
         }
 
@@ -132,14 +131,14 @@
             margin-top: 10px;
             padding: 8px 12px;
             border: none;
-            background-color: #6dff8e;
+            background-color: #0c84a1;
             cursor: pointer;
             font-weight: bold;
             border-radius: 5px;
         }
 
         .product-card button:hover {
-            background-color: #50cc70;
+            background-color: #50b3cc;
         }
     </style>
 </head>
@@ -150,24 +149,10 @@
             <font size="5">The MODERNIST</font><br />
             <font size="2">for design</font>
         </div>
-        <div id="d3" class="c1">home</div>
-        <div id="d4" class="c1">style demo</div>
-        <div id="d5" class="c1">full width</div>
-        <div id="d6" class="c1">drop down</div>
-        <div id="d7" class="c1">portfolio</div>
-        <div id="d8" class="c1">gallery</div>
+        <button href="home_page.html"><div id="d3" class="c1">home</div></button>
+        
 
-        <div id="div1">
-            <div id="div11" class="c6"></div>
-            <div id="div12" class="c5">
-                <p></p>
-            </div>
-            <div id="div13" class="c5">
-                <div id="d121"></div>
-            </div>
-            <div id="div14" class="c6"></div>
-        </div>
-    </div>
+      
 
     <h2 style="text-align:center">Featured Products</h2>
     <div id="product-container" style="text-align:center;"></div>
@@ -176,7 +161,7 @@
         const products = [
             {
                 name: "SAMSUNG Galaxy A16 5G",
-                img: "FeaturedProduct_1.jpg",
+                img: "https://m.media-amazon.com/images/I/61Lp1UcxeLL._AC_SX679_.jpg",
                 description: "SAMSUNG Galaxy A16 5G A Series Cell Phone, Unlocked Android Smartphone, Large AMOLED Display...",
                 oldPrice: "EGP8,070.00",
                 newPrice: "EGP7,399.00",
@@ -184,7 +169,7 @@
             },
             {
                 name: "LED Light Bar",
-                img: "LED_Light_Bar.jpg",
+                img: "https://m.media-amazon.com/images/I/61GwqKyW1PL._AC_SY879_.jpg",
                 description: "LED Light Bar, Music Sync RGB Light Bar, USB Ambient Lamp, Color Changing...",
                 oldPrice: "EGP1,000.00",
                 newPrice: "EGP800.00",
@@ -192,7 +177,7 @@
             },
             {
                 name: "CTIME 3-Tier Medicine Organizer",
-                img: "Medicine_Organizer.jpg",
+                img: "https://m.media-amazon.com/images/I/71d2okjshqL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
                 description: "Portable Medicine Cabinet with Leather Handle, Empty First Aid Kit for Home...",
                 oldPrice: "EGP2,000.00",
                 newPrice: "EGP1,850.00",
