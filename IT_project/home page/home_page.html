@@ -62,54 +62,6 @@
             fill: #f36dff;
         }
 
-        .c2 {
-            height: 70vh;
-            width: 49vw;
-            display: inline-block;
-            background-color: white;
-            color: white;
-            vertical-align: middle;
-        }
-
-        #d121 {
-            height: 25vw;
-            width: 25vw;
-            display: inline-block;
-            background-color: transparent;
-            border: 3px solid black;
-            border-radius: 25vw;
-            background-size: 35vw;
-        }
-
-        .c5 {
-            display: flex;
-            width: 34.5vw;
-            height: 60vh;
-            background-color: transparent;
-            padding: 3px;
-            align-items: center;
-            justify-content: space-around;
-            text-align: center;
-        }
-
-        .c6 {
-            width: 14.5vw;
-            height: 60vh;
-            background-color: transparent;
-            display: flex;
-            padding: 3px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #div1 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        /* Basic styling for product cards */
         .product-card {
             display: inline-block;
             background-color: rgb(231, 207, 238);
@@ -118,7 +70,8 @@
             padding: 15px;
             margin: 10px;
             border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
         }
 
         .product-card img {
@@ -127,36 +80,28 @@
             border-radius: 5px;
         }
 
-        .product-card button {
-            margin-top: 10px;
+        button {
             padding: 8px 12px;
             border: none;
             background-color: #0c84a1;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .product-card button:hover {
-            background-color: #50b3cc;
+            cursor:pointer;
         }
     </style>
 </head>
 
 <body>
-    <div name="container1" id="d1">
-        <div id="d2">
-            <font size="5">The MODERNIST</font><br />
-            <font size="2">for design</font>
-        </div>
-        <button href="home_page.html" onfocus="PointerEvent"><div id="d3" class="c1">home</div></button>
-        
+    
+        <div name="container1" id="d1">
+            <div id="d2">
+                <font size="5">The MODERNIST</font><br />
+                <font size="2">for design</font>
+            </div>
+            <button id="home button" href="home_page.html">Home</button>
 
       
 
     <h2 style="text-align:center">Featured Products</h2>
-    <div id="product-container" style="text-align:center;"></div>
-
+        <div id="product-container"></div>
     <script>
         const products = [
             {
