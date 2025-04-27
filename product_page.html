@@ -2,6 +2,25 @@
 <html>
 <head>
     <title>product_Page</title>
+    <style>
+        #cart {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position:fixed;
+    top: 15px;
+    left: 90%;
+}
+
+#cart_img {
+    width: 50px;
+    height: auto;
+}
+    </style>
+        <meta name="the MODERNIST" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
     <header>
@@ -10,44 +29,81 @@
         </div>
         <nav>
             <ul class="Nav_Links">
-              <li><a href="#home">Home</a></li>
+              <li><a href="home_page.html">Home</a></li>
               <li><a href="#products">Products</a></li>
             </ul>
           </nav>
-          <div class="Product_Page_Icons">
-            <a href="Amazon-Search-Logo.png"></a>
-            <a href="Shopping_Cart_Icon.png"></a>
-          </div>
+          <button id="cart" href="cart_page.html"><img src="https://cdn-icons-png.flaticon.com/128/12588/12588590.png" id="cart_img"></button>
     </header>
-            <!--Items-->
-    <div class="Items">
-        <img  src="https://m.media-amazon.com/images/I/61R8OgObRsL._AC_SX466_.jpg" style="height: 500px;">
-        <h3>USB Condenser Microphone</h3>
-        <p>Amazon Basics USB Condenser Microphone for <br>Streaming, Recording, and Podcasting on PC, Plug and<br> Play, Cardioid Pickup, Adjustable Stand with 360° Rotation,<br> 5.8 x 3.4 inches, Black</p>
-        <span style="color: red; font-size: 25px;" >-8%</span>
-        <span style="font-size: 25px;" >EGP1625.40</span>
-        <div><s>EGP34.64</s></div>
-        <ul>
-        <li><p><b>Recommended Uses For</b> Streaming</p></li>
-        <li><p><b>Brand</b> Amazon Basics</p></li>
-        <li><p><b>Model Name</b> AMZ-S6524A</p></li>
-        <li><p><b>Connectivity</b> USB</p></li>
-        <li><p><b>Special Feature</b> Mute Function</p></li>
-        <li><p><b>Compatible Devices</b> Laptop</p></li>
-        <li><p><b>Color</b> Black</p></li>
-        <li><p><b>Included Components</b> Microphone, Cable</p></li>
-        <li><p><b>Polar Pattern</b> Unidirectional</p></li>
-        </ul>
-
-        <h3>About this item</h3>
-        <ul>
-            <li><p>CONDENSER MICROPHONE: High sensitivity, low <br> noise, and low distortion with a large 14mm diaphragm <br>and clear sound pickup</p></li>
-            <li><p>FOR STREAMING & MORE: 360° rotation adjustable<br> stand mic is ideal to track your voice in real-time <br>conference, online streaming, podcasting, music recording, solo<br> vocals or instruments and more</p></li>
-            <li><p>CARDIOID PICKUP PATTERN: Cardioid pickup pattern <br>microphone effectively isolates background noise, e<br>nsuring clear and clean sound for recording and broadcasting</p></li>
-            <li><p>ONE TAP SILENT MODE: Stylish design USB micro<br>phone built-in convenient one-tap mute function that sy<br>ncs with your laptop or PC. Compatible with Windows OS 7, XP, 8,<br> 10 or higher, Mac OS 10.10 or higher, streaming and broadcasting applications</p></li>
-            <li><p>PLUG AND PLAY: Easy to use with no additional<br> drivers required and connect with USB data transfer cab<br>le; it can be detached and installed on tripods, boom arm or mic<br>rophone stands that with a standard 5/8 inch thread</p></li>
-            <li><p>STABILITY: Come with a built-in shock absorber<br> and silicone rubber microphone boot</p></li>
-            <button>Report and issue with this product</button>
+    <div id="product-details" style="text-align: center; margin-top: 20px;">
+<img id="product-img" src="" alt="">
+<h1 id="product-name"></h1>
+<p id="product-desc"></p>
+<p id="product-price"></p>
             <button>Add to Cart</button>
-        </ul>
     </div>
+</body>
+<script>
+    const products = [
+            {
+                id : "1",
+                name: "SAMSUNG Galaxy A16 5G",
+                img: "https://m.media-amazon.com/images/I/61Lp1UcxeLL._AC_SX679_.jpg",
+                description: "SAMSUNG Galaxy A16 5G A Series Cell Phone, Unlocked Android Smartphone, Large AMOLED Display...",
+                oldPrice: "EGP8,070.00",
+                newPrice: "EGP7,399.00",
+                discount: "9% OFF"
+            },
+            {
+                id : "2",
+                name: "LED Light Bar",
+                img: "https://m.media-amazon.com/images/I/61GwqKyW1PL._AC_SY879_.jpg",
+                description: "LED Light Bar, Music Sync RGB Light Bar, USB Ambient Lamp, Color Changing...",
+                oldPrice: "EGP1,000.00",
+                newPrice: "EGP800.00",
+                discount: "20% OFF"
+            },
+            {
+                id : "3",
+                name: "CTIME 3-Tier Medicine Organizer",
+                img: "https://m.media-amazon.com/images/I/71d2okjshqL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+                description: "Portable Medicine Cabinet with Leather Handle, Empty First Aid Kit for Home...",
+                oldPrice: "EGP2,000.00",
+                newPrice: "EGP1,850.00",
+                discount: "7.5% OFF"
+            }
+        ];
+        const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+const product = products.find(p => p.id === productId);
+if (product) {
+    document.getElementById("product-img").src = product.img;
+    document.getElementById("product-name").textContent = product.name;
+    document.getElementById("product-desc").textContent = product.description;
+    document.getElementById("product-price").innerHTML =
+        `<s>${product.oldPrice}</s> <strong>${product.newPrice}</strong> <span style="color:red">${product.discount}</span>`;
+} else {
+    document.body.innerHTML = "<p>Product not found.</p>";
+}
+function createProductCard(product) {
+            const card = document.createElement("div");
+            card.className = "product-card";
+
+            card.innerHTML = `
+                <a href="product_page.html"class="product-link"><img id="product-img" src="${product.img}" alt="${product.name}" ></a>
+                <h3 id="product-name">${product.name}</h3>
+                <p id="product-desc">${product.description}</p>
+                <p><s id="product-old-price">${product.oldPrice}</s id="product-new-price"> <strong>${product.newPrice}</strong> <span style="color:red">${product.discount}</span></p>
+                <button onclick="products.forEach(productt => if(product.name=productt.name){ {addToCart(${product}});}" style="bottom:20px;">Add to Cart</button>
+            `;
+            return card;
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById(`row-${rowscount}`);
+            products.forEach(product => {
+                const card = createProductCard(product);
+                container.appendChild(card);
+            });
+        });
+</script>
+</html>
