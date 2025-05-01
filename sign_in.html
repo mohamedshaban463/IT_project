@@ -1,76 +1,291 @@
 <!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!--   <button>Home Page</button>
+    <html lang="en">
+    <head>
+        <title>Account Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+            
+            body {
+                background-color: #f5f5f5;
+            }
+            
+            .account-page {
+                padding: 50px 0;
+                background-color: #382d3d;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .col-2 {
+                flex: 1;
+                min-width: 300px;
+                padding: 20px;
+            }
+            
+            .form-container {
+                background: #fff;
+                width: 100%;
+                max-width: 400px;
+                position: relative;
+                text-align: center;
+                padding: 40px 30px;
+                border-radius: 8px;
+                margin: 0 auto;
+                box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+            }
+            
+            .form-btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 30px;
+                position: relative;
+            }
+            
+            .form-btn span {
+                font-weight: bold;
+                padding: 10px 20px;
+                color: #555;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+            
+            .form-btn span i {
+                margin-right: 8px;
+                font-size: 18px;
+            }
+            
+            .form-btn span.active {
+                color: #382d3d;
+            }
+            
+            #Indicator {
+                position: absolute;
+                width: 100px;
+                border: none;
+                background: #382d3d;
+                height: 3px;
+                bottom: -8px;
+                left: 50px;
+                transition: all 0.3s ease;
+            }
+            
+            form {
+                width: 100%;
+                display: none;
+                animation: fadeIn 0.5s;
+            }
+            
+            form.active {
+                display: block;
+            }
+            
+            form input {
+                width: 100%;
+                height: 45px;
+                margin: 10px 0;
+                padding: 0 15px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                transition: all 0.3s;
+            }
+            
+            form input:focus {
+                border-color: #382d3d;
+                outline: none;
+            }
+            
+            form .btn {
+                width: 100%;
+                height: 45px;
+                border: none;
+                background-color: #382d3d;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                margin: 15px 0;
+                border-radius: 4px;
+                transition: all 0.3s;
+            }
+            
+            form .btn:hover {
+                background-color: #2a2230;
+            }
+            
+            form a {
+                font-size: 14px;
+                color: #555;
+                text-decoration: none;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            
+            form a:hover {
+                color: #382d3d;
+                text-decoration: underline;
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            @media (max-width: 768px) {
+                .col-2 {
+                    flex: 100%;
+                }
+                
+                .form-container {
+                    padding: 30px 20px;
+                }
+            }
+            #cart_img {
+    width: 50px;
+    height: auto;
+}
+.nav {
+    background-color: transparent;
+    padding: 5px;
+    margin: 1.3em;
+    display: inline-block;
+    background-color: #826b8d;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 1s 0.2s;
+    color: white;
+}
+#nav {
+    margin: 2em;
+    width: 14em;
+    height: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+#cart {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position:fixed;
+    top: 15px;
+    left: 90%;
+}
+#d1 {
+            height: 40em;
+            background-color: #382d3d;
+            color: white;
+            vertical-align: middle;
+            align-content: left;
+        }
 
-  <div class="signup-container">
-    <h3>Sign In</h3>
-    <form action="your_script.php" method="post">
-      <label for="Email">Email</label><br>
-      <input type="email" id="Email" name="Email" required placeholder="Enter your Email"><br>
-
-      <label for="password">Password</label><br>
-      <input type="password" id="password" name="password" required placeholder="Enter your password" minlength="8"><br><br>
-
-      <input type="submit" value="Sign In">
-    </form>
-  </div>
-  <script src="sign_in.js"></script> -->
-   <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form>
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registeration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in">
-            <form>
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
-                    <button class="hidden" id="login">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
-                    <button class="hidden" id="register">Sign Up</button>
+        #d2 {
+            padding: 2px;
+            margin: 6em;
+            margin-top: 2em;
+            display: inline-block;
+            background-color: transparent;
+            width: 14em;
+            height: 1.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+        </style>
+    </head>
+    <body>
+        <div name="container1" id="d1">
+            <div id="d2">
+                <font size="5">The MODERNIST</font><br />
+                <font size="2">for design</font>
+                <a id="cart" href="cart_page.html"><img src="https://cdn-icons-png.flaticon.com/128/12588/12588590.png" id="cart_img"></a>
+            </div>
+            <div id="nav">
+            <button class="nav" onclick="window.location.href='home_page.html'" style=" hover {cursor : pointer;}">Home</button>
+            </div>
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span class="active" onclick="showForm('LoginForm')">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </span>
+                                <span onclick="showForm('RegForm')">
+                                    <i class="fas fa-user-plus"></i> Register
+                                </span>
+                                <hr id="Indicator">
+                            </div>
+                            
+                            <form id="LoginForm" class="active">
+                                <input type="text" placeholder="Username" required>
+                                <input type="password" placeholder="Password" required minlength="8" maxlength="16">
+                                <button type="submit" class="btn">Login</button>
+                                <a href="#">Forgot password?</a>
+                            </form>
+    
+                            <form id="RegForm">
+                                <input type="text" placeholder="Username" required>
+                                <input type="email" placeholder="Email" required>
+                                <input type="password" placeholder="Password" required minlength="8" maxlength="16">
+                                <button type="submit" class="btn">Register</button>
+                                <a href="#">Already have an account?</a>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+     
+        <script>
+            function showForm(formId) {
+                document.querySelectorAll('form').forEach(form => {
+                    form.classList.remove('active');
+                });
+                document.getElementById(formId).classList.add('active');
+                document.querySelectorAll('.form-btn span').forEach(span => {
+                    span.classList.remove('active');
+                });
+                const indicator = document.getElementById('Indicator');
+                if (formId === 'LoginForm') {
+                    indicator.style.transform = 'translateX(0)';
+                    document.querySelector('.form-btn span:nth-child(1)').classList.add('active');
+                } else {
+                    indicator.style.transform = 'translateX(100%)';
+                    document.querySelector('.form-btn span:nth-child(2)').classList.add('active');
+                }
+            }
+        </script> 
+    </body>
+    </html>
