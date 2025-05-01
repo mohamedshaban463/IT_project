@@ -2,28 +2,240 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <style>
+
+body{
+    background-color: #382d3d;
+    border: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+/*nav bar*/
+nav{
+    background-color: #8f63a3;
+}
+nav ul{
+display: flex;
+margin: 0;
+padding: 0;
+list-style: none;
+
+}
+nav ul li{
+    padding: 2%;
+    margin-left: 9%;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+}
+nav ul li a:hover{
+    background-color: rgb(206, 125, 238);
+    text-decoration-line: underline;
+    text-decoration-color: black;
+}
+input::placeholder{
+    color: black;
+}
+textarea::placeholder{
+    color: black;
+}
+/* page name*/
+#add-product-text{
+    text-align: center;
+    color: white;
+}
+.section1{
+    background-color: #b4599da8;
+    height: 400px;
+    width: 50%;
+    margin: 30px;
+    border-radius: 20px;
+    font-size: 1.5em;
+    position: relative;
+}
+/* <div> product name*/
+.name{
+    position: relative;
+    left: 55px;
+}
+/*<input> name product*/
+#name{
+    width: 60%;
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #7a0abb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 1px rgb(29, 29, 29);
+
+}
+.label-description{
+    position: relative;
+    bottom: 70px;
+    }
+#description{
+    
+    width: 60%;
+    height: 200px;
+    background-color: #7a0abb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 1px rgb(29, 29, 29);
+}
+
+
+
+.section2{
+    background-color: #b4599da8;
+    height: 200px;
+    width: 50%;
+    font-size: 1.5em;
+    margin: 30px;
+    border-radius: 20px;
+    
+}
+#price{
+    width: 30%;
+    height: 20px;
+    background-color: #7a0abb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 1px rgb(29, 29, 29);
+}
+#in-stock{
+    width: 30%;
+    height: 20px;
+    background-color: #7a0abb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 1px rgb(29, 29, 29);
+}
+/* <div> discount for the product*/
+.discount{
+    position: relative;
+    top: 50px;
+}
+/* <input>  discount for the product*/
+#discount{
+
+    width: 30%;
+    height: 20px;
+    background-color: #7a0abb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 1px rgb(29, 29, 29);
+}
+.section3{
+    font-size: 1.5em;
+    background-color: #b4599da8;
+    height: 630px;
+    width: 40%;
+    margin: 30px;
+    border-radius: 20px;
+    position: absolute;
+    top: 160px;
+    right: 20px;
+}
+
+.image{
+    height: 400px;
+}
+
+#upload-image{
+    width: 45%;
+    height: 40px;
+   
+}
+.submit{
+    width: 45%;
+    height: 40px;
+    margin-bottom: 20px;
+    background-color: #7a0abb;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 1px rgb(29, 29, 29);
+    text-align: center;
+}
+
+
+   </style>
+   
     <title>Add Product</title>
 </head>
 <body>
+    <!--nav bar -->
+<nav class="nav-bar">
+    
+    <ul>
+        <li><a href="home" target="_self">The MODERNIST  for design </a></li>
+        <li><a href="cart page" target="_self">cart</a></li>
+        <li><a href="home page" target="_self">home</a></li>
+        <li><a href="sign in page" target="_self">sign in</a></li>
+    </ul>
+
+</nav>
+
+<!--first section about the product-->
+<h1 id="add-product-text">Add New Product</h1>
+<section class="section1">
+    
+    
+        
+     <div class="name">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="name of the product" required>
+     </div>
+
+     <div>
+        <label for="description" class="label-description" >Description:</label>
+        <textarea id="description" name="description" placeholder="Product Description"></textarea>
+     </div>
+
+</section>
+
+<!-- second section about price-->
+<section class="section2">
+
+
     <div>
-        <h1>Add New Product</h1>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div>
-            <label for="price">Price:</label>
-            <input type="number" id="price" name="price">
-        </div>
-        <div>
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"></textarea>
-        </div>
-        <div>
-            <label>Image URL:</label>
-            <input type="url" id="image" name="image">
-        </div>
-        <button type="button">Add Product</button>
+        <label for="price" >Price:</label>
+        <input type="number" id="price" name="price" placeholder="product price" required>
+        <label for="in-stock" >in stock:</label>
+        <input type="number" id="in-stock" name="in-stock" placeholder="number of product in stock" required>
     </div>
+    
+    <div class="discount">
+        <label for="discount" >discount:</label>
+        <input type="number" id="discount" name="discount" min="0" max="100" placeholder="if there is discount" >
+        
+    </div>
+
+
+</section>
+
+
+
+<section class="section3">
+
+
+<!-- upload image-->
+        <div class="image">
+        <p>upload image</p>
+        
+       
+        <input type="file" id="upload-image" name="upload-image" >
+        <img src="" alt="" id="image">
+        </div>
+
+
+
+        <div>
+            <p>add product</p>
+            <input type="submit" value="add product" class="submit" >
+        </div>
+            
+
+
+</section>
+
 </body>
 </html>
