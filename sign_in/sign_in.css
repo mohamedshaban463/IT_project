@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Register - The MODERNIST</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -248,47 +240,3 @@
                 background-color: white;
                 transition: all 0.3s ease;
             }
-    </style>
-</head>
-<body>
-    <div name="container1" id="d1">
-        <nav class="navbar">
-            <a href="home_page.html" class="logo">The MODERNIST</a>
-            
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <div class="nav-links">
-                <a href="add_product.html">Add-Products</a>
-                <a href="sign_in.html">Sign In</a>
-                <a href="sign_up.html">Register</a>
-                <a href="cart_page.html">
-                    <img src="https://cdn-icons-png.flaticon.com/128/12588/12588590.png" class="cart-icon">
-                    <span id="cart-count">0</span>
-                </a>
-            </div>
-        </nav>
-    
-    <div class="account-page">
-        <div class="container">
-            <div class="form-container">
-                <div class="form-title">
-                    <i class="fas fa-user-plus"></i>
-                    <h2>Register</h2>
-                </div>
-                
-                <form id="RegForm">
-                    <input type="text" placeholder="Username" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required minlength="8" maxlength="16">
-                    <button type="submit" class="btn">Register</button>
-                    <a href="sign_in.html">Already have an account? Sign In</a>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
