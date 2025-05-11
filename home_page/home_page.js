@@ -76,3 +76,6 @@ const button = document.getElementById("toggleMode");
   button.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
   });
+if (sessionStorage.getItem("darkMode") === "enabled") {
+    document.body.classList.add("dark");
+  }
