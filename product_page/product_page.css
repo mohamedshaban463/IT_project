@@ -197,6 +197,10 @@ h1 {
     background-color: rgb(255, 255, 255);
     color: black;
 }
+p {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
 body.dark-mode p , h1 {
   background-color: #000000;
     color: white;

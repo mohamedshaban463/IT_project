@@ -198,6 +198,10 @@
                 background-color: white;
                 transition: all 0.3s ease;
             }
+            p {
+                color: #000000;
+                background-color: #ffffff;
+                }
 body.dark-mode .account-page {
   background-color: #000000;
   color: white;
