@@ -147,11 +147,11 @@ body {
   background-color: #000000;
   color: white;
 }
-.product-card.dark-mode {
+body.dark-mode .product-card{
   background-color: #000000;
   color: white;
 }
-#d1.dark-mode {
+body.dark-mode #d1 {
   background-color: #000000;
   color: white;
 }
