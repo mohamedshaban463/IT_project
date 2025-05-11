@@ -72,3 +72,7 @@ const products = [
                     navLinks.classList.toggle("active");
                 });
             });
+const button = document.getElementById("toggleMode");
+  button.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
