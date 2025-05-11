@@ -11,7 +11,7 @@
         
         .account-page {
             padding: 50px 0;
-            background-color: #382d3d;
+            background-color: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -25,7 +25,7 @@
         }
         
         .form-container {
-            background: #fff;
+            background-color: rgb(191, 167, 214);
             width: 100%;
             max-width: 400px;
             position: relative;
@@ -101,25 +101,7 @@
             height: auto;
         }
         
-        #d1 {
-            height: 40em;
-            background-color: #382d3d;
-            color: white;
-            vertical-align: middle;
-            align-content: left;
-        }
-
-        #d2 {
-            padding: 2px;
-            margin: 6em;
-            margin-top: 2em;
-            display: inline-block;
-            background-color: transparent;
-            width: 14em;
-            height: 1.5em;
-            text-align: center;
-            font-weight: bold;
-        }
+        
         
         .nav-link {
             color: white;
@@ -132,28 +114,7 @@
                 padding: 30px 20px;
             }
         }
-        .cart-button {
-                padding: 8px 12px;
-                border: none;
-                border-radius: 25px;
-                background-color: rgb(255, 210, 20);
-                cursor:pointer;
-                transition: opacity 0.15s;
-            }
-    
-            .buy-button {
-                padding: 8px 12px;
-                border: none;
-                border-radius: 25px;
-                background-color: rgb(255, 164, 28);
-                cursor:pointer;
-                transition: opacity 0.15s;
-            }
-    
-            .cart-button:hover{opacity: 0.8;}
-            .buy-button:hover{opacity: 0.8;}
-            .cart-button:active{opacity: 0.5;}
-            .buy-button:active{opacity: 0.5;}
+        
     
             @media (max-width: 768px) {
                 .hamburger {
