@@ -49,6 +49,7 @@ function createProductCard(product) {
                 <p id="product-desc">${product.description}</p>
                 <p><s id="product-old-price">${product.oldPrice}</s id="product-new-price"> <strong>${product.newPrice}</strong> <span style="color:red">${product.discount}</span></p>
                 <button onclick="products.forEach(productt => if(product.name=productt.name){ {addToCart(${product}});}" style="bottom:20px;">Add to Cart</button>
+                <button class="buy-button">Buy now</button>
             `;
             return card;
         }
@@ -59,3 +60,7 @@ function createProductCard(product) {
                 container.appendChild(card);
             });
         });
+const button = document.getElementById("toggleMode");
+  button.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });

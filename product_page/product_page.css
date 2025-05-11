@@ -194,3 +194,15 @@
             p {
                 color: rgb(0, 0, 0);
             }
+body.dark-mode {
+  background-color: #000000;
+  color: white;
+}
+h1 {
+    background-color: white;
+    color: black;
+}
+.dark-mode p , h1 {
+  background-color: #000000;
+    color: white;
+}

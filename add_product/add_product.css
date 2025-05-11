@@ -250,3 +250,7 @@ textarea::placeholder{
                 background-color: white;
                 transition: all 0.3s ease;
             }
+body.dark-mode {
+  background-color: #000000;
+  color: white;
+}
