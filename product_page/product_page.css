@@ -188,21 +188,16 @@
                 background-color: white;
                 transition: all 0.3s ease;
             }
-            h1 {
-                color: rgb(0, 0, 0);
-            }
-            p {
-                color: rgb(0, 0, 0);
-            }
+            
 body.dark-mode {
   background-color: #000000;
   color: white;
 }
 h1 {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
-.dark-mode p , h1 {
+body.dark-mode p , h1 {
   background-color: #000000;
     color: white;
 }
