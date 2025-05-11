@@ -22,8 +22,6 @@
             text-align: center;
         }
         body {
-            background-color: #382d3d;
-            background: linear-gradient(to bottom right, #382d3d, #320b49);
             color: white;
             font-family: 'Segoe UI';
             padding: 20px;
@@ -81,41 +79,7 @@
         .items img:hover{
             transform: scale(1.05);
         }
-        #sign_in{
-          font-size: 125%;
-          padding: 2px;
-          margin: 2em;
-          display: inline-block;
-          width: 8em;
-          height: auto;
-          text-align: center;
-          font-weight: bold;
-          background-color: #382d3d;
-          color: white;
-          vertical-align: middle;
-          position: fixed;
-          top: 15px;
-          left: 70%;
-          text-decoration: none;
-
-        }
-        #Register{
-          font-size: 125%;
-          padding: 2px;
-          margin: 2em;
-          display: inline-block;
-          width: 8em;
-          height: auto;
-          text-align: center;
-          font-weight: bold;
-          background-color: #382d3d;
-          color: white;
-          vertical-align: middle;
-          position: fixed;
-          top: 15px;
-          left: 50%;
-          text-decoration: none;
-        }
+        
         .cart-button {
                 padding: 8px 12px;
                 border: none;
@@ -223,4 +187,10 @@
                 margin: 5px auto;
                 background-color: white;
                 transition: all 0.3s ease;
+            }
+            h1 {
+                color: rgb(0, 0, 0);
+            }
+            p {
+                color: rgb(0, 0, 0);
             }
